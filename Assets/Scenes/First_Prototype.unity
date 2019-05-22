@@ -141,11 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb9d3f5bf6d5b64d80b191c147b40df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  h1: {fileID: 177254, guid: e086196633391794b92cb8199f8053ac, type: 3}
-  h2: {fileID: 0}
-  h3: {fileID: 0}
-  h4: {fileID: 0}
-  h5: {fileID: 0}
+  h1: {fileID: 100000, guid: e2dc86f01fc1cb84e8a980b02fcf009e, type: 3}
+  h2: {fileID: 100024, guid: 0d6c5697d33c56e46b4508555460f763, type: 3}
+  h3: {fileID: 177254, guid: e086196633391794b92cb8199f8053ac, type: 3}
+  h4: {fileID: 100000, guid: 992a107a96103d14faa27ddb3ec329ed, type: 3}
+  h5: {fileID: 100000, guid: aec80801a87fcf8498f38f9f92ef3975, type: 3}
   max_houses: 40
   grid_width: 30
   grid_length: 30

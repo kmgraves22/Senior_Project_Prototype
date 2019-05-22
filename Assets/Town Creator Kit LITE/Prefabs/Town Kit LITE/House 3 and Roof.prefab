@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 9500000}
   m_Layer: 0
   m_Name: House 3 and Roof
-  m_TagString: Untagged
+  m_TagString: Generated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

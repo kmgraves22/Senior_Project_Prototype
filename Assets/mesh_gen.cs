@@ -36,7 +36,7 @@ public class mesh_gen : MonoBehaviour
         {
             for (int x = 0; x <= xSize; x++)
             {
-                float y = Mathf.PerlinNoise(x * .3f, z * .3f) * 40f;
+                float y = Mathf.PerlinNoise(x * .3f, z * .3f) * 40f * Random.value;
                 if (x == 0 || x== xSize || z == 0 || z == zSize)
                 {
                     y = 0;
