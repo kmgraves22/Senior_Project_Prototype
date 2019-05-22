@@ -18,6 +18,8 @@ public class building_gen : MonoBehaviour
     private int house_here = 1;
     private int un_explored = 0;
     private int neighbors = -1;
+
+    private int curr_together = 0;
     
 
 
@@ -50,6 +52,14 @@ public class building_gen : MonoBehaviour
                 {
                     grid[temp[i]] = house_here;
                     house_count += 1;
+                    curr_together += 1;
+                    
+                    //pick a new direction to start generating
+                    if (curr_together >= 6)
+                    {
+                        i = 0;
+                        curr_together = 0;
+                    }
                     if (temp[i] + 1 < 100 && temp[i] + 1 > -1 && grid[temp[i] + 1] == 0)
                     {
                         grid[temp[i] + 1] = -1;
@@ -75,6 +85,7 @@ public class building_gen : MonoBehaviour
                 int toInt = (int)rand_1;
                 grid[toInt] = house_here;
                 house_count += 1;
+                curr_together += 1;         
                 if (toInt + 1 < 100 && toInt + 1 > -1 && grid[toInt + 1] == 0)
                 {
                     grid[toInt + 1] = -1;
