@@ -146,6 +146,10 @@ MonoBehaviour:
   h3: {fileID: 177254, guid: e086196633391794b92cb8199f8053ac, type: 3}
   h4: {fileID: 100000, guid: 992a107a96103d14faa27ddb3ec329ed, type: 3}
   h5: {fileID: 100000, guid: aec80801a87fcf8498f38f9f92ef3975, type: 3}
+  r1: {fileID: 119504, guid: 8788c47ca714a0a4ba42bbe5ca58fbb7, type: 3}
+  r2: {fileID: 188934, guid: b4ec2e072f9907142bdae941457df304, type: 3}
+  r3: {fileID: 119504, guid: 69c569626bb6e1546937fb73ebc28eb7, type: 3}
+  r4: {fileID: 188934, guid: cccf0a3167a42464eb8682655e8a9828, type: 3}
   max_houses: 40
   grid_width: 30
   grid_length: 30
@@ -498,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
       propertyPath: m_LocalScale.y
@@ -506,7 +510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}

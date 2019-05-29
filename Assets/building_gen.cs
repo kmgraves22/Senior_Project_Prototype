@@ -9,6 +9,10 @@ public class building_gen : MonoBehaviour
     public GameObject h3;
     public GameObject h4;
     public GameObject h5;
+    public GameObject r1;
+    public GameObject r2;
+    public GameObject r3;
+    public GameObject r4;
     public int max_houses = 30;
 
     public int grid_width;
@@ -182,6 +186,15 @@ public class building_gen : MonoBehaviour
                     randx = Random.value * 10;
                     randy = Random.value * 10;
                     Instantiate(h2, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 0f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
+                    int roof_num = (int)(Random.value * 4);
+                    if (roof_num == 0 | roof_num == 4)
+                        Instantiate(r1, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.34f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
+                    else if (roof_num == 1)
+                        Instantiate(r2, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.34f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
+                    else if (roof_num == 2)
+                        Instantiate(r3, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.8f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
+                    else
+                        Instantiate(r4, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.8f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
                 }
 
                 else if (grid[i] == 3)

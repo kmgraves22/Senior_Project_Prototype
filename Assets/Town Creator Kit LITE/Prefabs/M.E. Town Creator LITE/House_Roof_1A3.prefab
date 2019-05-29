@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2376396}
   - component: {fileID: 6493790}
   m_Layer: 0
-  m_Name: House_Roof_1A2
+  m_Name: House_Roof_1A3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 188934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.7062507, y: 11.44, z: -2.5750976}
-  m_LocalScale: {x: 0.8, y: 0.49, z: 0.73}
+  m_LocalScale: {x: 0.8, y: 0.7, z: 0.73}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
