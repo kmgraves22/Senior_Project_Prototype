@@ -138,14 +138,39 @@ public class building_gen : MonoBehaviour
             }
             temp.Clear();
         }
+        int rand_rotation;
         //create houses from grid
         for (i = 0; i < 100; i++)
         {
             float randx, randy;
+            rand_rotation = (int)(Random.value * 4);
+
+            Vector3 rot;
+            if (rand_rotation == 0)
+            {
+                rot = new Vector3(0, 0, 0);
+            }
+            else if (rand_rotation == 1)
+            {
+                rot = new Vector3(0, 90, 0);
+            }
+            else if (rand_rotation == 2)
+            {
+                rot = new Vector3(0, 180, 0);
+            }
+            else if (rand_rotation == 3)
+            {
+                rot = new Vector3(0, 270, 0);
+            }
+            else
+            {
+                rot = new Vector3(0, 360, 0);
+            }
+           
             int water_location = water_generator.River_Start;
             int test = ((water_location * 10) - 520);
             print(test);
-            if ((transform.position.x + i / 10 + i % 10 *grid_width < (water_generator.River_Min * 10) - 520 -10) | ((transform.position.x + i / 10 + i % 10 *grid_width) > (water_generator.River_Max * 10) - 520 + 10))
+            if ((transform.position.x + i / 10 + i % 10 *grid_width < (water_generator.River_Min * 10) - 520) | ((transform.position.x + i / 10 + i % 10 *grid_width) > (water_generator.River_Max * 10) - 520 + 20))
             {
                 if (grid[i] == 1)
                 {
@@ -156,27 +181,27 @@ public class building_gen : MonoBehaviour
                 {
                     randx = Random.value * 10;
                     randy = Random.value * 10;
-                    Instantiate(h2, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 0f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
+                    Instantiate(h2, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 0f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
                 }
 
                 else if (grid[i] == 3)
                 {
                     randx = Random.value * 10;
                     randy = Random.value * 10;
-                    Instantiate(h3, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.33f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
+                    Instantiate(h3, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.33f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
                 }
 
                 else if (grid[i] == 4)
                 {
 
-                    Instantiate(h4, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width, 10.8f, transform.position.z + i / 10 * grid_length), Quaternion.identity);
+                    Instantiate(h4, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width, 10.6f, transform.position.z + i / 10 * grid_length), Quaternion.Euler(rot));
                 }
 
                 else if (grid[i] == 5)
                 {
                     randx = Random.value * 10;
                     randy = Random.value * 10;
-                    Instantiate(h5, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 2.5f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
+                    Instantiate(h5, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 2.5f, transform.position.z + i / 10 * grid_length + randy), Quaternion.Euler(rot));
                 }
             }
 
