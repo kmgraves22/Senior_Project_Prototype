@@ -142,38 +142,43 @@ public class building_gen : MonoBehaviour
         for (i = 0; i < 100; i++)
         {
             float randx, randy;
-            if (grid[i] == 1)
+            int water_location = water_generator.River_Start;
+            int test = ((water_location * 10) - 520);
+            print(test);
+            if ((transform.position.x + i / 10 + i % 10 *grid_width < (water_generator.River_Min * 10) - 520 -10) | ((transform.position.x + i / 10 + i % 10 *grid_width) > (water_generator.River_Max * 10) - 520 + 10))
             {
-                Instantiate(h1, new Vector3(transform.position.x + i/10 + i%10 * grid_width, 2.313424f,transform.position.z + i/10 * grid_length - 40), new Quaternion(Quaternion.identity.x, 180, Quaternion.identity.z, Quaternion.identity.w));
+                if (grid[i] == 1)
+                {
+                    Instantiate(h1, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width, 2.313424f, transform.position.z + i / 10 * grid_length - 40), new Quaternion(Quaternion.identity.x, 180, Quaternion.identity.z, Quaternion.identity.w));
+                }
+
+                else if (grid[i] == 2)
+                {
+                    randx = Random.value * 10;
+                    randy = Random.value * 10;
+                    Instantiate(h2, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 0f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
+                }
+
+                else if (grid[i] == 3)
+                {
+                    randx = Random.value * 10;
+                    randy = Random.value * 10;
+                    Instantiate(h3, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.33f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
+                }
+
+                else if (grid[i] == 4)
+                {
+
+                    Instantiate(h4, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width, 10.8f, transform.position.z + i / 10 * grid_length), Quaternion.identity);
+                }
+
+                else if (grid[i] == 5)
+                {
+                    randx = Random.value * 10;
+                    randy = Random.value * 10;
+                    Instantiate(h5, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 2.5f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
+                }
             }
-
-            else if (grid[i] == 2)
-            {
-                randx = Random.value * 10;
-                randy = Random.value * 10;
-                Instantiate(h2, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 0f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
-            }
-
-            else if (grid[i] == 3)
-            {
-                randx = Random.value * 10;
-                randy = Random.value * 10;
-                Instantiate(h3, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 5.33f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
-            }
-
-            else if (grid[i] == 4)
-            {
-
-                Instantiate(h4, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width , 10.8f, transform.position.z + i / 10 * grid_length), Quaternion.identity);
-            }
-
-            else if (grid[i] == 5)
-            {
-                randx = Random.value * 10;
-                randy = Random.value * 10;
-                Instantiate(h5, new Vector3(transform.position.x + i / 10 + i % 10 * grid_width + randx, 2.5f, transform.position.z + i / 10 * grid_length + randy), Quaternion.identity);
-            }
-
 
         }
     }
