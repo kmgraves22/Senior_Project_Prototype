@@ -27,10 +27,6 @@ public class water_generator : MonoBehaviour
 
 
     }
-    private void Update()
-    {
-
-    }
     void CreateShape()
     {
         //
@@ -42,6 +38,7 @@ public class water_generator : MonoBehaviour
         {
             river_index = (int)(Random.value * xSize);
         }
+        river_index = 50;
         River_Start = river_index;
         for (int i = 0, z = 0; z <= zSize; z++)
         {
